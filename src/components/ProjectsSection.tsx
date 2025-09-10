@@ -6,11 +6,11 @@ import { ExternalLink, Github } from 'lucide-react';
 export function ProjectsSection() {
     const projects = [
         {
-            title: 'FitBox',
-            subtitle: 'Gym Company Platform',
+            title: 'Social Fitness Platform',
+            subtitle: 'Collaboration with Rio Yamashita',
             description:
-                'Built a responsive membership and payment management system using React, TypeScript, Node.js, and Azure. Integrated Stripe for secure payments, reducing manual billing by 40%. Deployed on Azure, improving reliability and user experience.',
-            image: '/fitbox.png',
+                'Collaborated with Rio Yamashita to develop a comprehensive fitness tracking and social networking platform. Built with React, TypeScript, and Node.js, featuring user profiles, workout tracking, and community features. Integrated Stripe for subscription payments and deployed on Azure for optimal performance.',
+            image: '/workEXP.png',
             technologies: [
                 'React',
                 'TypeScript',
