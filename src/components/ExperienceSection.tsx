@@ -70,7 +70,6 @@ export function ExperienceSection() {
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-8 mb-12">
-                        {/* Experience */}
                         <Card className="h-full">
                             <CardHeader>
                                 <CardTitle className="text-xl">
@@ -141,7 +140,6 @@ export function ExperienceSection() {
                             </CardContent>
                         </Card>
 
-                        {/* Soft Skills */}
                         <Card className="h-full">
                             <CardHeader>
                                 <CardTitle className="text-xl">
@@ -166,7 +164,6 @@ export function ExperienceSection() {
                         </Card>
                     </div>
 
-                    {/* Awards & Achievements */}
                     <Card>
                         <CardHeader>
                             <CardTitle className="text-xl">

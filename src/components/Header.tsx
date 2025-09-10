@@ -51,7 +51,6 @@ export function Header() {
             Jomar S. Alberastine
           </button>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -73,7 +72,6 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Mobile Navigation */}
           <div className="md:hidden flex items-center space-x-2">
             <Button
               variant="ghost"
@@ -98,7 +96,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-background border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
