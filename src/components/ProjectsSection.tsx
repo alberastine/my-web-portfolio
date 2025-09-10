@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from './ui/card';
+import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
@@ -122,7 +122,7 @@ export function ProjectsSection() {
                                 </CardHeader>
 
                                 <CardContent className="space-y-4">
-                                    <p className="text-sm text-muted-foreground leading-relaxed">
+                                    <p className="text-sm text-muted-foreground leading-relaxed h-48">
                                         {project.description}
                                     </p>
 
@@ -155,11 +155,22 @@ export function ProjectsSection() {
                                             )}
                                         </div>
                                     </div>
-
+                                </CardContent>
+                                <CardFooter>
                                     <div className="flex gap-2 pt-2">
-                                        <Button size="sm" className="flex-1">
-                                            <ExternalLink className="mr-1 h-3 w-3" />
-                                            Live Demo
+                                        <Button
+                                            asChild
+                                            size="sm"
+                                            className="flex-1"
+                                        >
+                                            <a
+                                                href={project.liveUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <ExternalLink className="mr-1 h-3 w-3" />
+                                                Live Demo
+                                            </a>
                                         </Button>
                                         <Button
                                             asChild
@@ -177,7 +188,7 @@ export function ProjectsSection() {
                                             </a>
                                         </Button>
                                     </div>
-                                </CardContent>
+                                </CardFooter>
                             </Card>
                         ))}
                     </div>
