@@ -1,0 +1,154 @@
+.contact-section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* contact Header */
+.contact-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.contact-section-header h2 {
+    font-size: 1.875rem;
+}
+
+@media (min-width: 640px) {
+    .contact-section-header h2 {
+        font-size: 2.25rem;
+    }
+}
+
+.contact-section-header p {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    max-width: 42rem;
+    margin: 0 auto;
+    font-weight: lighter;
+}
+
+/* Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Contact Card */
+.contact-card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* .contact-header {
+    padding-bottom: 12px;
+} */
+
+.contact-icon {
+    display: inline-flex;
+    padding: 16px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: #1d4ed8;
+}
+
+.contact-green {
+    background: rgba(34, 197, 94, 0.1);
+    color: #15803d;
+}
+
+.contact-purple {
+    background: rgba(139, 92, 246, 0.1);
+    color: #6d28d9;
+}
+
+.contact-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-link {
+    font-size: 0.9rem;
+    color: #6b7280;
+    text-decoration: none;
+    word-break: break-all;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #2563eb;
+}
+
+/* CTA Card */
+.contact-cta-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.contact-cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-cta h3 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+.contact-cta p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .cta-buttons {
+        flex-direction: row;
+    }
+}
+
+.cta-btn {
+    min-width: 160px;
+}
+
+/* Icons */
+.icon-md {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}

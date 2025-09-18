@@ -1,7 +1,8 @@
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
+import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
+import '@/styles/ProjectsSection.css';
 
 export function ProjectsSection() {
     const projects = [
@@ -76,122 +77,96 @@ export function ProjectsSection() {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-accent/30">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl mb-4">
-                            Featured Projects
-                        </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            A showcase of my recent work in web development,
-                            demonstrating my skills in full-stack development
-                            and problem-solving.
-                        </p>
-                    </div>
+        <section id="projects" className="projects-section">
+            <div className="container">
+                <div className="projects-header">
+                    <h2>Featured Projects</h2>
+                    <p>
+                        A showcase of my recent work in web development,
+                        demonstrating my skills in full-stack development
+                        and problem-solving.
+                    </p>
+                </div>
 
-                    <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                        {projects.map((project, index) => (
-                            <Card
-                                key={index}
-                                className="group hover:shadow-lg transition-all duration-300 overflow-hidden"
-                            >
-                                <div className="relative">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    />
+                <div className="projects-grid">
+                    {projects.map((project, index) => (
+                        <Card key={index} className="project-card">
+                            <div className="project-image-wrapper">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="project-image"
+                                />
+                                {project.isOngoing && (
+                                    <Badge className="project-badge">Ongoing</Badge>
+                                )}
+                            </div>
 
-                                    {project.isOngoing && (
-                                        <Badge className="absolute top-4 right-4 bg-orange-500 hover:bg-orange-600">
-                                            Ongoing
-                                        </Badge>
-                                    )}
+                            <div className="project-basic">
+                                <h3>{project.title}</h3>
+                                <p>{project.subtitle}</p>
+                            </div>
+
+                            <div className="project-hover">
+                                <p className="project-description">
+                                    {project.description}
+                                </p>
+
+                                <div className="project-meta">
+                                    <div className="project-tech">
+                                        {project.technologies.map(
+                                            (tech, techIndex) => (
+                                                <Badge
+                                                    key={techIndex}
+                                                    variant="outline"
+                                                    className="project-tech-badge"
+                                                >
+                                                    {tech}
+                                                </Badge>
+                                            )
+                                        )}
+                                    </div>
+
+                                    <div className="project-highlights">
+                                        {project.highlights.map(
+                                            (highlight, highlightIndex) => (
+                                                <div
+                                                    key={highlightIndex}
+                                                    className="project-highlight"
+                                                >
+                                                    <div className="dot" />
+                                                    {highlight}
+                                                </div>
+                                            )
+                                        )}
+                                    </div>
                                 </div>
 
-                                <CardHeader>
-                                    <div className="space-y-2">
-                                        <h3 className="text-xl">
-                                            {project.title}
-                                        </h3>
-                                        <p className="text-sm text-muted-foreground">
-                                            {project.subtitle}
-                                        </p>
-                                    </div>
-                                </CardHeader>
-
-                                <CardContent className="space-y-4">
-                                    <p className="text-sm text-muted-foreground leading-relaxed h-48">
-                                        {project.description}
-                                    </p>
-
-                                    <div className="space-y-3">
-                                        <div className="flex flex-wrap gap-1">
-                                            {project.technologies.map(
-                                                (tech, techIndex) => (
-                                                    <Badge
-                                                        key={techIndex}
-                                                        variant="outline"
-                                                        className="text-xs"
-                                                    >
-                                                        {tech}
-                                                    </Badge>
-                                                )
-                                            )}
-                                        </div>
-
-                                        <div className="space-y-1">
-                                            {project.highlights.map(
-                                                (highlight, highlightIndex) => (
-                                                    <div
-                                                        key={highlightIndex}
-                                                        className="flex items-center text-xs text-muted-foreground"
-                                                    >
-                                                        <div className="w-1 h-1 bg-primary rounded-full mr-2" />
-                                                        {highlight}
-                                                    </div>
-                                                )
-                                            )}
-                                        </div>
-                                    </div>
-                                </CardContent>
-                                <CardFooter>
-                                    <div className="flex gap-2 pt-2">
-                                        <Button
-                                            asChild
-                                            size="sm"
-                                            className="flex-1"
+                                <div className="project-actions">
+                                    <Button asChild size="sm" className="btn-primary">
+                                        <a
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
-                                            <a
-                                                href={project.liveUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <ExternalLink className="mr-1 h-3 w-3" />
-                                                Live Demo
-                                            </a>
-                                        </Button>
-                                        <Button
-                                            asChild
-                                            variant="outline"
-                                            size="sm"
-                                            className="flex-1"
+                                            <ExternalLink className="icon" />
+                                            Live Demo
+                                        </a>
+                                    </Button>
+                                    <Button asChild variant="outline" size="sm" className="btn-outline">
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
-                                            <a
-                                                href={project.githubUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <Github className="mr-1 h-3 w-3" />
-                                                Code
-                                            </a>
-                                        </Button>
-                                    </div>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
+                                            <Github className="icon" />
+                                            Code
+                                        </a>
+                                    </Button>
+                                </div>
+                            </div>
+                        </Card>
+                    ))}
                 </div>
             </div>
         </section>

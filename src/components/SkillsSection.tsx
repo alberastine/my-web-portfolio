@@ -1,75 +1,124 @@
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { Code, Database, Wrench, Globe } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Badge } from './ui/badge';
+import { Code, Database, Wrench, Globe } from 'lucide-react';
+
+import '@/styles/SkillSection.css';
 
 export function SkillsSection() {
-  const skillCategories = [
-    {
-      title: "Languages",
-      icon: <Code className="h-5 w-5" />,
-      skills: ["TypeScript", "JavaScript", "PHP", "Java App", "HTML", "CSS"],
-      color: "bg-blue-500/10 text-blue-700 dark:text-blue-300",
-    },
-    {
-      title: "Frontend",
-      icon: <Globe className="h-5 w-5" />,
-      skills: ["React", "Zustand", "shadcn/ui", "Ant Design", "Flowbite", "React Icons"],
-      color: "bg-green-500/10 text-green-700 dark:text-green-300",
-    },
-    {
-      title: "Backend & Database",
-      icon: <Database className="h-5 w-5" />,
-      skills: ["Node.js", "Express", "MongoDB", "Azure", "Supabase"],
-      color: "bg-purple-500/10 text-purple-700 dark:text-purple-300",
-    },
-    {
-      title: "Tools & Other",
-      icon: <Wrench className="h-5 w-5" />,
-      skills: ["Git", "GitHub", "Postman", "Figma", "Stripe Integration", "JWT Auth", "RESTful APIs"],
-      color: "bg-orange-500/10 text-orange-700 dark:text-orange-300",
-    },
-  ];
+    const skillCategories = [
+        {
+            title: 'TypeScript',
+            img: '/icons/1.png',
+        },
+        {
+            title: 'PhP',
+            img: '/icons/2.png',
+        },
+        {
+            title: 'JavaScript',
+            img: '/icons/3.png',
+        },
+        {
+            title: 'Html',
+            img: '/icons/4.png',
+        },
+        {
+            title: 'Css',
+            img: '/icons/5.png',
+        },
+        {
+            title: 'Github',
+            img: '/icons/6.png',
+        },
+        {
+            title: 'Rreact',
+            img: '/icons/7.png',
+        },
+        {
+            title: 'Zustand',
+            img: '/icons/8.png',
+        },
+        {
+            title: 'Shadcn UI',
+            img: '/icons/9.png',
+        },
+        {
+            title: 'Ant Design',
+            img: '/icons/10.png',
+        },
+        {
+            title: 'Flowbite',
+            img: '/icons/11.png',
+        },
+        {
+            title: 'Node.js',
+            img: '/icons/12.png',
+        },
+        {
+            title: 'Figma',
+            img: '/icons/13.png',
+        },
+        {
+            title: 'VsCode',
+            img: '/icons/14.png',
+        },
+        {
+            title: 'Postman',
+            img: '/icons/15.png',
+        },
+        {
+            title: 'Rest API',
+            img: '/icons/16.png',
+        },
+        {
+            title: 'JWT',
+            img: '/icons/17.png',
+        },
+        {
+            title: 'MongoDB',
+            img: '/icons/18.png',
+        },
+        {
+            title: 'Supabase',
+            img: '/icons/19.png',
+        },
 
-  return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl mb-4">Technical Skills</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive overview of the technologies and tools I work with to build modern web applications.
-            </p>
-          </div>
+        {
+            title: 'Azure',
+            img: '/icons/20.png',
+        },
+        {
+            title: 'git',
+            img: '/icons/21.png',
+        },
+    ];
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skillCategories.map((category, index) => (
-              <Card key={index} className="h-full">
-                <CardHeader className="pb-4">
-                  <CardTitle className="flex items-center space-x-2 text-lg">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                      {category.icon}
+    return (
+        <section id="skills" className="section-skill-container">
+            <div className="skills-container">
+                <div className="skills-wrapper">
+                    <div className="skills-header">
+                        <h2>TECHNICAL SKILLS</h2>
+                        <p>Technologies and tools</p>
                     </div>
-                    <span>{category.title}</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, skillIndex) => (
-                      <Badge
-                        key={skillIndex}
-                        variant="secondary"
-                        className={`${category.color} transition-all hover:scale-105`}
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+                    <div className="skills-grid">
+                        {skillCategories.map((skill, index) => (
+                            <Card key={index} className="skill-card">
+                                <div className="skill-content">
+                                    <img
+                                        src={skill.img}
+                                        alt={skill.title}
+                                        className="skill-img"
+                                    />
+                                    <span className="skill-title">
+                                        {skill.title}
+                                    </span>
+                                </div>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }

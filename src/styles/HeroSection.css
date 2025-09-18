@@ -1,0 +1,53 @@
+.section-container {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 9rem;
+    padding-bottom: 5rem;
+    /* background: linear-gradient(90deg, #000000, #555555); */
+    background-color: black;
+}
+
+.hero-container {
+    width: 100%;
+    padding: 0 7rem;
+}
+
+.label-greetings {
+    font-size: 2rem;
+    color: white;
+    font-family: monospace;
+}
+
+.label-name {
+    font-size: 5rem;
+    color: white;
+    font-family: fantasy;
+}
+
+.label-profession {
+    font-size: 3rem;
+    color: white;
+    font-family: monospace;
+}
+
+.label-description {
+    font-size: 1.5rem;
+    color: gray;
+    font-family: monospace;
+    text-align: justify;
+}
+
+.about-me-button {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

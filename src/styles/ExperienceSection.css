@@ -1,0 +1,192 @@
+.experience-section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.experience-header h2 {
+    font-size: 1.875rem;
+}
+
+@media (min-width: 640px) {
+    .experience-header h2 {
+        font-size: 2.25rem;
+    }
+}
+
+.experience-header p {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    max-width: 42rem;
+    margin: 0 auto;
+    font-weight: lighter;
+}
+
+/* Grid layout */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.card-full {
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+/* Experience details */
+.experience-title {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.experience-meta {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+}
+
+.icon-sm {
+    width: 18px;
+    height: 18px;
+}
+
+.experience-description {
+    margin: 16px 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Details */
+.details-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.tech-badge {
+    font-size: 0.75rem;
+}
+
+/* Achievements */
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #3b82f6;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+/* Skills */
+.soft-skills-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.soft-skill-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(240, 240, 240, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Awards */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(240, 240, 240, 0.4);
+}
+
+.award-icon {
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-yellow {
+    background: rgba(234, 179, 8, 0.15);
+    color: #b45309;
+}
+
+.award-green {
+    background: rgba(34, 197, 94, 0.15);
+    color: #15803d;
+}
+
+.award-blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #1d4ed8;
+}
+
+.award-purple {
+    background: rgba(139, 92, 246, 0.15);
+    color: #6d28d9;
+}
+
+.award-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.award-description {
+    font-size: 0.85rem;
+    color: #6b7280;
+}

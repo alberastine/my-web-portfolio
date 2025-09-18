@@ -1,0 +1,172 @@
+.projects-section {
+    padding: 80px 20px;
+    background: rgba(240, 240, 240, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.projects-header h2 {
+    font-size: 1.875rem;
+}
+
+@media (min-width: 640px) {
+    .projects-header h2 {
+        font-size: 2.25rem;
+    }
+}
+
+.projects-header p {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    max-width: 42rem;
+    margin: 0 auto;
+    font-weight: lighter;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.project-image-wrapper {
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #f97316;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* Basic info (always visible) */
+.project-basic {
+    padding: 16px;
+    text-align: center;
+}
+
+.project-basic h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.project-basic p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Hover content (hidden by default) */
+.project-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.project-card:hover .project-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Description */
+.project-description {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    overflow: auto;
+    max-height: 120px;
+}
+
+/* Tech badges */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.project-tech-badge {
+    font-size: 0.75rem;
+}
+
+/* Highlights */
+.project-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1rem;
+}
+
+.project-highlight {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.project-highlight .dot {
+    width: 4px;
+    height: 4px;
+    background: #3b82f6;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* Actions */
+.project-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.project-actions .btn-primary,
+.project-actions .btn-outline {
+    flex: 1;
+}
+
+.icon {
+    margin-right: 6px;
+    height: 14px;
+    width: 14px;
+}
