@@ -6,48 +6,111 @@
     overflow: hidden;
     padding-top: 9rem;
     padding-bottom: 5rem;
-    /* background: linear-gradient(90deg, #000000, #555555); */
     background-color: black;
 }
 
 .hero-container {
-    width: 100%;
-    padding: 0 7rem;
+  width: 100%;
+  padding: 0 7rem;
 }
 
+/* Headings */
 .label-greetings {
-    font-size: 2rem;
-    color: white;
-    font-family: monospace;
+  font-size: 2rem;
+  color: white;
+  font-family: monospace;
 }
 
 .label-name {
-    font-size: 5rem;
-    color: white;
-    font-family: fantasy;
+  font-size: 5rem;
+  color: white;
+  font-family: fantasy;
 }
 
 .label-profession {
-    font-size: 3rem;
-    color: white;
-    font-family: monospace;
+  font-size: 3rem;
+  color: white;
+  font-family: monospace;
 }
 
 .label-description {
-    font-size: 1.5rem;
-    color: gray;
-    font-family: monospace;
-    text-align: justify;
+  font-size: 1.5rem;
+  color: gray;
+  font-family: monospace;
+  text-align: justify;
+  max-width: 900px;
 }
 
+/* About Me Button */
 .about-me-button {
-    margin-top: 7rem;
-    margin-left: 7rem;
-    padding: 0.75rem 1.5rem;
+  margin-top: 7rem;
+  margin-left: 7rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* ----------------------- */
+/* 📱 Responsive Breakpoints */
+/* ----------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 0 3rem;
+    text-align: center;
+  }
+
+  .label-name {
+    font-size: 3.5rem;
+  }
+
+  .label-profession {
+    font-size: 2.2rem;
+  }
+
+  .label-description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .about-me-button {
+    margin: 3rem auto 0;
+    display: block;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 640px) {
+  .hero-container {
+    padding: 0 1.5rem;
+  }
+
+  .label-greetings {
+    font-size: 1.5rem;
+  }
+
+  .label-name {
+    font-size: 2.2rem;
+  }
+
+  .label-profession {
+    font-size: 1.5rem;
+  }
+
+  .label-description {
     font-size: 1rem;
-    color: white;
-    border: 1px solid white;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+
+  .about-me-button {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
