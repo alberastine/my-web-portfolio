@@ -91,6 +91,14 @@ export function SkillsSection() {
             title: 'git',
             img: '/icons/21.png',
         },
+        {
+            title: 'Android Studio',
+            img: '/icons/22.png',
+        },
+        {
+            title: 'Java',
+            img: '/icons/23.png',
+        },
     ];
 
     return (
