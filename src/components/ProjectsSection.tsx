@@ -55,6 +55,17 @@ export function ProjectsSection() {
       githubUrl: 'https://github.com/alberastine/apex-supply-pos-system',
       highlights: ['Order Management', 'Sales Tracking', 'Inventory Tracking'],
     },
+    {
+      title: 'BrewMate',
+      subtitle: 'POS System for Cafes',
+      description:
+        'This POS system, built using Android Java (Groovy) and utilizing local storage through SharedPreferences, simplifies the process of taking orders, managing items, tracking sales, and maintaining inventory. It provides a dedicated interface designed for both cashiers and administrators.',
+      image: '/brewmate_logo.png',
+      technologies: ['Android (Java)', 'Groovy', 'SharedPreferences', 'XML', 'Material Design Components', 'Gradle'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/alberastine/brewmate-pos-system',
+      highlights: ['Order Management', 'Sales Tracking', 'Inventory Tracking'],
+    },
   ];
 
   return (
