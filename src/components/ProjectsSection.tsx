@@ -27,7 +27,7 @@ export function ProjectsSection() {
       description:
         'Full-stack task management system with React, Node.js, and MongoDB. Features include personal/team task tracking, calendar integration, dashboards with charts, and planned Stripe subscriptions. Boosted team accountability and productivity.',
       image: '/teamnest.png',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js', 'Vite', 'Tailwind CSS', 'deployed on Vercel'],
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Chart.js', 'Vite', 'Tailwind CSS', 'deployed on Vercel'],
       liveUrl: '#',
       githubUrl: 'https://github.com/alberastine/centralized-bus-system',
       highlights: ['Team collaboration features', 'Interactive dashboards', 'Calendar integration'],
@@ -65,6 +65,17 @@ export function ProjectsSection() {
       liveUrl: '#',
       githubUrl: 'https://github.com/alberastine/brewmate-pos-system',
       highlights: ['Order Management', 'Sales Tracking', 'Inventory Tracking'],
+    },
+    {
+      title: 'Lumnos',
+      subtitle: 'POS System for Cafes',
+      description:
+        'The Teacher Performance Tracker is an Android mobile application that helps teachers efficiently record and manage student performance — including activities, assignments, recitations, attendance, and exams. All data is stored locally using Shared Preferences, allowing teachers to work completely offline without internet access. The app also lets users export student performance data as a PDF for sharing or printing.',
+      image: '/Lumnos Logo.png',
+      technologies: ['Android (Java)', 'Groovy', 'SharedPreferences', 'XML', 'Material Design Components', 'Gradle', 'Android PDFDocument API / iText Library'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/alberastine/lumnos',
+      highlights: ['Offline Data Storage', 'Performance Recording', 'Class Management', 'PDF Export', 'User-Friendly Interface', 'Lightweight Design'],
     },
   ];
 
